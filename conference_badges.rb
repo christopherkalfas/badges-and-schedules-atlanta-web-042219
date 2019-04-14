@@ -23,6 +23,12 @@ end
    
    
  def printer(attendees) 
-   puts batch_badge_creator(attendees)
-   puts assign_rooms(attendees)
+   name_badge = []
+   room_assigments = []
+   batch_badge_creator(attendees).each do |ind_badge|
+    name_badge << ind_badge
+    end 
+    room_assigments = assign_rooms(attendees).each do |ind_room|
+      room_assigments << ind_room
+   puts room_assigments
   end 
